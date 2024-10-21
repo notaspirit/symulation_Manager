@@ -4,20 +4,7 @@ const { program } = require('commander');
 const { getAppDataDir, getSymulationDir, newSymLinkFile, newSymLinkDir, delSymLinkFile, delSymLinkDir, listSymLinks, deleteSymLinkById, delSymLinkFileById } = require('./core');
 program
   .version('1.0.0')
-  .description('A simple CLI tool');
-
-program
-  .command('get-app-data-dir')
-  .action(() => {
-    console.log(getAppDataDir());
-  });
-
-program
-  .command('get-symulation-dir')
-  .action(() => {
-    console.log(getSymulationDir());
-  });
-
+  .description('A simple CLI tool for managing sym links');
 program
   .command('newfile <origin-path> <target-path>')
   .description('Create a file sym link')
